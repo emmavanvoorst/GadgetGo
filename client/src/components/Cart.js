@@ -39,7 +39,7 @@ const Cart = () => {
   //fetching cart items details such as price 
   const fetchItemsDetails = (items) => {
     const itemDetailsPromises = items.map((item) => {
-      return fetch(`/api/item/${item._id}`)
+      return fetch(`https://gadget-go.vercel.app/api/item/${item._id}`)
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -108,7 +108,7 @@ const Cart = () => {
 
   const handleCheckout = () => {
     // Perform post request to submit the cartItems for checkout
-    fetch("/api/purchase-item", {
+    fetch("https://gadget-go.vercel.app/api/purchase-item", {
       method: "POST",
       body: JSON.stringify(cartItems),
       headers: {
@@ -132,7 +132,7 @@ const Cart = () => {
 
   const handleDeleteItem = (itemId) => {
     // Perform delete request to remove a single item from the cart
-    fetch(`/api/delete-item/${itemId}`, {
+    fetch(`https://gadget-go.vercel.app/api/delete-item/${itemId}`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -153,7 +153,7 @@ const Cart = () => {
 
   const handleEmptyCart = () => {
     // Perform delete request to remove all items from the cart
-    fetch("/api/delete-AllItems", {
+    fetch("https://gadget-go.vercel.app/api/delete-AllItems", {
       method: "DELETE",
     })
       .then((response) => {
