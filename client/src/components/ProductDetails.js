@@ -17,7 +17,7 @@ const ProductDetails = () => {
     let mounted = true;
 
     const fetchItemData = async () => {
-      const response = await fetch(`/api/item/${params.itemId}`);
+      const response = await fetch(`https://gadget-go-api.vercel.app/api/item/${params.itemId}`);
       const data = await response.json();
       if (data.status === 400 || data.status === 500) {
         throw new Error(data.message);
@@ -30,7 +30,7 @@ const ProductDetails = () => {
     };
 
     const fetchCompanyData = async (companyId) => {
-      const response = await fetch(`/api/company/${companyId}`);
+      const response = await fetch(`https://gadget-go-api.vercel.app/api/company/${companyId}`);
       const data = await response.json();
       if (data.status === 400 || data.status === 500) {
         throw new Error(data.message);
@@ -53,7 +53,7 @@ const ProductDetails = () => {
     setStatus(null);
     setError(null);
 
-    fetch("/api/add-item-to-cart", {
+    fetch("https://gadget-go-api.vercel.app/api/add-item-to-cart", {
       method: "POST",
       headers: {
         Accept: "application/json",

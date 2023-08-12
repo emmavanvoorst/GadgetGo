@@ -39,7 +39,7 @@ const CompanySideBar = () => {
   useEffect(() => {
     let mounted = true;
 
-    fetch(`/api/get-companies`)
+    fetch(`https://gadget-go-api.vercel.app/api/get-companies`)
       .then((response) => response.json())
       .then((parse) => {
         if (parse.status === 400 || parse.status === 500) {

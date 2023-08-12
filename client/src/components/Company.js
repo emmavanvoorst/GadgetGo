@@ -16,7 +16,7 @@ const Company = () => {
 
     //fetching company data
     const fetchCompanyData = async (companyId) => {
-      const response = await fetch(`/api/company/${params.companyId}`);
+      const response = await fetch(`https://gadget-go-api.vercel.app/api/company/${params.companyId}`);
       const data = await response.json();
       if (data.status === 400 || data.status === 500) {
         throw new Error(data.message);
@@ -30,7 +30,7 @@ const Company = () => {
 
     //fetching all the items that is made by the company
     const fetchAllItems = async (companyId) => {
-      const response = await fetch(`/api/get-items`);
+      const response = await fetch(`https://gadget-go-api.vercel.app/api/get-items`);
       const data = await response.json();
       if (data.status === 400 || data.status === 500) {
         throw new Error(data.message);

@@ -24,7 +24,7 @@ const Header = () => {
   const limit = matchedItems.slice(0, 7);
 
   useEffect(() => {
-    fetch(`/api/get-items`)
+    fetch(`https://gadget-go-api.vercel.app/api/get-items`)
       .then((response) => response.json())
       .then((parse) => {
         setAllItems(parse.items);

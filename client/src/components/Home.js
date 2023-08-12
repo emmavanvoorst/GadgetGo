@@ -13,7 +13,7 @@ const Home = () =>{
   const [items, setItems] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/get-items`)
+    fetch(`https://gadget-go-api.vercel.app/api/get-items`)
       .then((response) => response.json())
       .then((parse) => {
         setItems(parse.items.slice(98,104)); 

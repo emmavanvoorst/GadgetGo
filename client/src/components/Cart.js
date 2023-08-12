@@ -16,7 +16,7 @@ const Cart = () => {
 
   //fetching cart items
   const fetchCartItems = () => {
-    fetch("/api/cart")
+    fetch("https://gadget-go-api.vercel.app/api/cart")
       .then((response) => {
         if (response.ok) {
           return response.json();

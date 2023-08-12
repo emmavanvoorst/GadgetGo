@@ -87,7 +87,7 @@ const CategoryTab = () => {
   useEffect(() => {
     let mounted = true;
 
-    fetch(`/api/get-items`)
+    fetch(`https://gadget-go-api.vercel.app/api/get-items`)
       .then((response) => response.json())
       .then((parse) => {
         if (parse.status === 400 || parse.status === 500) {
