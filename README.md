@@ -1,6 +1,6 @@
 # Wearables E-Commerce Project
 
-In a team of five, we built an e-commerce website that will showcase wearable technology. The client believes that wearable tech is the way of the future! it is a functional e-commerce website where users can come in and shop around for the tech they want.
+In a team of five, we built an e-commerce website that will showcase wearable technology. The client believes that wearable tech is the way of the future! It is a functional e-commerce website where users can come in and shop around for the tech they want.
 
 ![Screenshot of GadgetGo home page.](./server/assets/e-commerce.PNG)
 
